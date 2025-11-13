@@ -93,7 +93,8 @@ AIMaintain+/
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/your-username/AIMaintainPlus.git
+git clone https://github.com/Susheel13-prog/AIMaintain-
+
 cd AIMaintainPlus
 
 ---
