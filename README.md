@@ -1,123 +1,245 @@
-**AIMaintain+**__
-AI-Powered Predictive Maintenance & Smart Repair Assistance Platform
+**# AIMaintain+**
 
-AIMaintain+ is an AI-driven platform designed to help industries and vehicle owners prevent unexpected breakdowns and costly downtimes.
-It analyzes machine/vehicle logs, detects anomalies, predicts failures before they happen, and guides users toward quick repair solutions through an integrated chatbot and mechanic locator.
+### AI-Powered Predictive Maintenance & Smart Repair Assistance Platform
 
-🚀 Features
-🔮 Predictive Intelligence
+AIMaintain+ is an AI-driven platform designed to help industries and vehicle owners prevent unexpected breakdowns and costly downtimes. It analyzes machine/vehicle logs, detects anomalies, predicts failures before they happen, and guides users toward quick repair solutions through an integrated chatbot and mechanic locator.
 
-Uses machine-learning models to forecast equipment or vehicle failures.
+---
 
-Analyzes historical and real-time telemetry data.
+## 🚀 Features
 
-Generates severity-based alerts (Green / Yellow / Red).
+### 🔮 Predictive Intelligence
+- Uses machine-learning models to forecast equipment or vehicle failures.
+- Analyzes historical and real-time telemetry data.
+- Generates severity-based alerts (Green / Yellow / Red).
 
-⚠️ Anomaly Detection
+### ⚠️ Anomaly Detection
+- Flags unusual patterns and performance degradation.
+- Helps operators take preventive action early.
 
-Flags unusual patterns and performance degradation.
+### 🤖 Smart Assistance
+- Built-in AI chatbot for troubleshooting steps.
+- Instant repair suggestions and DIY guidance.
 
-Helps operators take preventive action early.
+### 🗺️ Mechanic Locator
+- Shows nearby mechanics for rapid issue resolution.
+- Map navigation and contact support.
 
-🤖 Smart Assistance
+### 📊 Modern Dashboard
+- Responsive UI using React + Tailwind CSS.
+- Live KPIs, charts, device health metrics, and recent anomalies.
 
-Built-in AI chatbot for troubleshooting steps.
+### 📁 CSV Log Upload
+- Upload machine/vehicle logs directly.
+- Instant backend analysis + prediction.
 
-Instant repair suggestions and DIY guidance.
+---
 
-🗺️ Mechanic Locator
+## 🏗️ Tech Stack
 
-Shows nearby mechanics for rapid issue resolution.
+### Frontend
+- React
+- Tailwind CSS
+- Framer Motion
+- Axios
 
-Map navigation and contact support.
+### Backend
+- Python Flask
+- Flask-CORS
+- MySQL / SQLite
+- REST APIs
 
-📊 Modern Dashboard
+### Machine Learning
+- scikit-learn
+- Pandas
+- Joblib
 
-Responsive UI using React + Tailwind CSS.
+### Deployment
+- Frontend: Vercel / Netlify
+- Backend: Railway / Render
+- Database: MySQL (cloud)
 
-Live KPIs, charts, device health metrics, and recent anomalies.
+---
 
-📁 CSV Log Upload
+## 📁 Project Structure
 
-Upload machine/vehicle logs directly.
-
-Instant backend analysis + prediction.
-
-🏗️ Tech Stack
-Frontend
-
-React
-
-Tailwind CSS
-
-Framer Motion
-
-Axios
-
-Backend
-
-Python Flask
-
-Flask-CORS
-
-MySQL / SQLite
-
-REST API architecture
-
-Machine Learning
-
-scikit-learn
-
-Pandas
-
-Joblib
-
-Deployment
-
-Frontend: Vercel / Netlify
-
-Backend: Railway / Render
-
-Database: MySQL (cloud)
-
-📁 Project Structure
 AIMaintain+/
 │
-├── frontend/               # React + Tailwind UI
-│   ├── src/
-│   │   ├── components/     # Reusable UI components
-│   │   ├── pages/          # Dashboard, Upload, Login, etc.
-│   │   ├── api/            # Axios API utils
-│   │   └── assets/         # Images, icons
-│   └── package.json
+├── frontend/ # React + Tailwind UI
+│ ├── src/
+│ │ ├── components/ # Reusable UI components
+│ │ ├── pages/ # Dashboard, Upload, Login, etc.
+│ │ ├── api/ # Axios API utils
+│ │ └── assets/ # Images, icons
+│ └── package.json
 │
-├── backend/                # Flask API
-│   ├── app.py              # Main backend server
-│   ├── routes/             # API routes
-│   ├── models/             # ML model loader, prediction logic
-│   ├── database/           # MySQL connection
-│   └── requirements.txt
+├── backend/ # Flask API
+│ ├── app.py # Main backend server
+│ ├── routes/ # API routes
+│ ├── models/ # ML model loader, prediction logic
+│ ├── database/ # MySQL connection
+│ └── requirements.txt
 │
 ├── ml/
-│   ├── train.py            # Train ML model
-│   ├── preprocess.py       # Data preprocessing logic
-│   └── model.joblib        # Saved trained model
+│ ├── train.py # Train ML model
+│ ├── preprocess.py # Data preprocessing logic
+│ └── model.joblib # Saved trained model
 │
 ├── data/
-│   └── sample_logs/        # Sample CSV logs
+│ └── sample_logs/ # Sample CSV logs
 │
 └── README.md
 
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
+yaml
+Copy code
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
 git clone https://github.com/your-username/AIMaintainPlus.git
 cd AIMaintainPlus
 
-Install dependencies
+yaml
+Copy code
+
+---
+
+## 2️⃣ Backend Setup (Flask)
+
+### Create virtual environment
+cd backend
+python -m venv venv
+source venv/bin/activate
+
+shell
+Copy code
+
+### Install dependencies
 pip install -r requirements.txt
 
-Run the backend
+shell
+Copy code
+
+### Run the backend
 python app.py
 
-Backend runs at:
+yaml
+Copy code
+Backend will start at:
 http://localhost:5000
+
+---
+
+## 3️⃣ Frontend Setup (React)
+
+cd ../frontend
+npm install
+npm run dev
+
+yaml
+Copy code
+
+Frontend will start at:
+http://localhost:5173
+
+---
+
+## 🔌 API Endpoints
+
+### **POST /upload**  
+Upload machine/vehicle logs.
+
+**Body:** CSV file  
+**Returns:** Parsed data summary
+
+---
+
+### **POST /predict**  
+Run ML model on uploaded data.
+
+**Returns (example):**
+```json
+{
+  "failure_probability": 0.87,
+  "severity": "high",
+  "message": "Potential engine failure predicted within 72 hours."
+}
+POST /chat
+Interact with AI assistant.
+
+Example request:
+
+json
+Copy code
+{ "message": "Engine making noise" }
+Example response:
+
+json
+Copy code
+{ "reply": "Please check the belt tension and coolant levels." }
+📸 Screenshots
+(Add your screenshot images inside /assets/screenshots)
+
+bash
+Copy code
+/assets/screenshots/dashboard.png
+/assets/screenshots/upload.png
+/assets/screenshots/chat.png
+🚧 Roadmap
+✔️ Version 1.0 (MVP)
+Frontend dashboard
+
+Log upload
+
+Basic ML prediction
+
+Chatbot (rule-based)
+
+Mechanic locator
+
+📘 Version 2.0
+Real-time telemetry (MQTT → WebSockets)
+
+Advanced anomaly detection models (LSTM, Isolation Forest)
+
+User roles: Admin, Technician, Operator
+
+🚀 Version 3.0
+Mobile App (Flutter)
+
+Cloud IoT device integration
+
+On-device inference for vehicles
+
+🧪 Sample Demo Flow
+User logs in
+
+Uploads machine logs
+
+System predicts failure risk
+
+Dashboard highlights anomalies
+
+User chats with AI assistant
+
+System shows nearest mechanics
+
+✨ Why AIMaintain+?
+Prevent breakdowns before they occur
+
+Reduce maintenance costs
+
+Faster troubleshooting
+
+Modular & scalable architecture
+
+Usable for industries and vehicle owners
+
+👨‍💻 Contributors
+Team TechTitans
+
+Hackathon: Proyog
+
+Domain: Digital-Physical Systems
