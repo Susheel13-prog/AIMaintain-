@@ -64,38 +64,38 @@ AIMaintain+ is an AI-driven platform designed to help industries and vehicle own
 ## 📁 Project Structure
 
 AIMaintain+/
-│
-├── frontend/ # React + Tailwind UI
-│ ├── src/
-│ │ ├── components/ # Reusable UI components
-│ │ ├── pages/ # Dashboard, Upload, Login, etc.
-│ │ ├── api/ # Axios API utils
-│ │ └── assets/ # Images, icons
-│ └── package.json
-│
-├── backend/ # Flask API
-│ ├── app.py # Main backend server
-│ ├── routes/ # API endpoints
-│ ├── models/ # ML model loader & prediction logic
-│ ├── database/ # MySQL connection
-│ └── requirements.txt
-│
-├── ml/
-│ ├── train.py # Train ML model
-│ ├── preprocess.py # Data preprocessing
-│ └── model.joblib # Saved model
-│
-├── data/
-│ └── sample_logs/ # Sample CSV logs
-│
-└── README.md
+- frontend/
+  - src/
+    - components/
+    - pages/
+    - api/
+    - assets/
+  - package.json
+
+- backend/
+  - app.py
+  - routes/
+  - models/
+  - database/
+  - requirements.txt
+
+- ml/
+  - train.py
+  - preprocess.py
+  - model.joblib
+
+- data/
+  - sample_logs/
+
+- README.md
+
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
 git clone https://github.com/Susheel13-prog/AIMaintain-
 
-cd AIMaintainPlus
+cd AIMaintain-
 
 ---
 
