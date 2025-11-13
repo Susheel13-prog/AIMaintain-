@@ -90,19 +90,12 @@ AIMaintain+/
 │
 └── README.md
 
-yaml
-Copy code
-
----
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
 git clone https://github.com/your-username/AIMaintainPlus.git
 cd AIMaintainPlus
-
-yaml
-Copy code
 
 ---
 
@@ -113,20 +106,13 @@ cd backend
 python -m venv venv
 source venv/bin/activate
 
-shell
-Copy code
 
 ### Install dependencies
 pip install -r requirements.txt
 
-shell
-Copy code
-
 ### Run the backend
 python app.py
 
-yaml
-Copy code
 Backend will start at:
 http://localhost:5000
 
@@ -137,9 +123,6 @@ http://localhost:5000
 cd ../frontend
 npm install
 npm run dev
-
-yaml
-Copy code
 
 Frontend will start at:
 http://localhost:5173
@@ -238,7 +221,7 @@ Modular & scalable architecture
 Usable for industries and vehicle owners
 
 👨‍💻 Contributors
-Team TechTitans
+Team Code Geass (Vishal Shenoy K, Varun PV, Vejay Varun P)
 
 Hackathon: Proyog
 
